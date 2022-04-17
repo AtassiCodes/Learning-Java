@@ -13,6 +13,8 @@ public class Learning_Methods {
 		MyUtilsMethod.printStuff(999);
 		MyUtilsMethod.addition(50, 100);
 		MyUtilsMethod.addten(190);
+		
+		
 	}
 	
 }

@@ -70,4 +70,10 @@ public class ControlFlow {
 		
 		// typically if you have many options it is better to use Switch statement, rather than If statement. But functionally they are very similar.
 	}
+	
+	// this will be imported in MyUtilsMethod
+	
+	public static void doSomething(int x) {
+		x = 10 + x;
+	}
 }
