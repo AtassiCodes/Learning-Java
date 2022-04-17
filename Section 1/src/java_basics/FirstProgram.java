@@ -1,4 +1,4 @@
-package getting_started;
+package java_basics;
 
 public class FirstProgram {
 
