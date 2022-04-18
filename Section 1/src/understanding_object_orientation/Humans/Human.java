@@ -21,7 +21,7 @@ public class Human {
 	}
 
 
-	// methods or instructions for the Human (class) would behave 
+	// methods or instructions for the Human (class) would behave:
 	
 	public void speak() {
 		System.out.println("Hello! My name is " + name +".");
