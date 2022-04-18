@@ -1,6 +1,6 @@
 package understanding_object_orientation.Zoo;
 
-public class Animal {
+public class Animal { // parent class
 	
 	String species;
 	int age;
