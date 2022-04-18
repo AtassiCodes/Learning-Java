@@ -1,6 +1,6 @@
 package understanding_object_orientation.Zoo;
 
-public class Animal { // parent class / super class / base class
+public class Animal { // parent class / super class / base class. methods from this class are inherited by base class aka birds
 	
 	String species;
 	int age;
