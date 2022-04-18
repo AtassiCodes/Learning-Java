@@ -1,1 +1,171 @@
-ss
+The starting point of every java application is the Main method.
+
+	public static void main(String[] args){
+
+------------
+
+what happens when you run a java program?
+
+	There are two memory locations coming from your RAM, that become reserved for your java application to run successfully.
+		1. Stack
+		2. Heap
+
+----------------------
+
+Stack:
+
+	frame = memory area, reserve space, etc.
+
+	***
+
+	The first method is the main method. 
+	A frame (memory area) from the stack is then created for the main method
+	
+	All the variables in the method are stored in frames or slots, within that frame. 
+
+		public static void main(String[] args){
+			int age; this would get its own frame within the main method frame.
+			age = 12; this would change the data within the frame. 
+		
+		This is a local variable.
+	
+	***
+		
+	Now, lets say we have a method called: doWork();
+	
+		This would create a new frame inside the stack,	different than the frame of the main method.
+		This would be stacked on top of it. 
+		
+		If a variable was defined under the second method,
+		
+		public static void doWork(){
+			float weight = 120.30
+			
+		This variable would be stored in a frame within the frame of the doWork() method. Similarly to the main method.
+		This would be a local variable to the doWork() method.
+	
+	***
+	
+	The same is repeated for all methods.
+	They are stacked on top of each other as they are run in order.
+	
+	***
+	
+	However, as each method is run and completed, their layer is removed from the stack, till we return back to the first layer. The main method.
+	
+	Once the main method is complete, that means the program is complete.
+	The memory layer of the main method is then removed, and the program is completed running.
+	
+----------------------
+
+Heap:
+	
+	Lets say we are still inside the main method. 
+	
+	We come across:
+		Car myCar; <- this car is not a primitive data type, it is a class type, a complex data type.
+	
+			This is a local reference variable
+			Again, a slot/frame would be created in the main method to hold the data of this variable
+		
+		myCar = new Car();		
+			
+			myCar, does not contain any object. it is a reference variable. 
+			It does not hold the variable but only refers to where the variable memory is.
+		
+		*** Everything above this line is Stack memory ***
+		*** Everything below this line is Heap memory ***
+		
+			new Car(); however, is the new object that is created. It resides on the Heap memory as a frame/slot.
+			
+			myCar from the Stack memory would point towards the new object Car(), on the Heap.
+			so myCar only holds the memory address of the object Car(), and nothing else.
+			
+	Now if, 
+		
+		myCar = new Car();
+	
+			is stated AGAIN
+				then myCar would forget the memory address of the first 'Car()'
+				and it would contain the memory address of the new object 'Car()'
+		
+----------------------
+
+This lead us to, Garbage Collection. This runs in the Heap.
+
+	Since myCar now hold the memory address of the new object, it has lost track of where the first object is located on the Heap.
+	Therefore, the first object can now be considered useless, as there is no way of any data to be read from it.
+
+	The garbage collection, would look for the first object which has been lost, and deletes it to save and reserve more memory for the program.
+
+----------------------
+
+The instance variable
+(primitive data type):
+
+	this is a variable that belongs to a particular instance. 
+	Many instances of the same class can be uniquely identifiable by the data that are in their instance variables. 
+	
+	Any variables in a class, are considered to be instance variables.
+	
+	For example,
+	
+		Class Car(){
+			int speed; <-- primitive data type
+		}
+		
+		***
+		
+		Car my2Car = new Car()
+		my2Car.speed = 120;
+		
+		Car my3Car = new Car()
+		my3Car.speed = 98
+		
+			the Car would reside in the Heap.
+			& the my2Car would reside in the Stack, holding the memory address of the Car
+			
+			speed (120) would reside on the Heap, on the Car slot/frame itself.
+
+			
+			a variable on the Stack frame would be created called my3Car, containing the address of the new Car() on the Heap.
+			On the Heap, on the new Car() method, the speed (98) variable would be created on the new Car() instance. 
+			
+	An instance variable is used to maintain the state of both objects/instances.
+			
+----------------------
+
+The instance variable
+(primitive data type):
+			
+	For example,
+	
+		Class Car(){
+			int speed;
+			Engine myEngine; <-- complex data type
+		}
+		
+		***
+		
+		Car my2Car = new Car()
+		my2Car.speed = 120;
+		
+		Car my3Car = new Car()
+		my3Car.speed = 98
+		
+		Engine bigEngine = new Engine();
+		my3Car.myEngine = bigEngine;
+	
+	
+			bigEngine containing the address of the object, on the Heap, would be placed in the Stack frame under the method that it is in. (the main method)
+			Since a new object Engine has been created, it would be placed on the Heap.
+			
+			Also, now that Engine has been added to the Car().
+			In the Heap to accommodate for that data, myEngine would be located on the Car() object slot.
+			& myEngine would contain the memory address of the Engine which is also on the Heap.
+			
+			^usually variables containing memory address is only on the Stack, however, in this instance it is in the Heap as well.
+			
+			
+			
+			
