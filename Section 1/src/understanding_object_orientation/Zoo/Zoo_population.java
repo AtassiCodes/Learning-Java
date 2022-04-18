@@ -12,7 +12,7 @@ public class Zoo_population {
 		sloth.Sleep();
 		monkey.Play();
 		
-		Birds parrot = new Birds("parrot", 3, "green");
+		Birds parrot = new Birds("parrot", 3, 1, 15, "green", "worms");
 		
 		parrot.flying();
 	}
