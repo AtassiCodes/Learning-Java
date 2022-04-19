@@ -4,9 +4,9 @@
 <p align="center">
   <img src=data/Target.png><br>
   <b>
-    Project first began on Novemeber 18, 2020.<br>
-    Project finished on November 25, 2020.<br>
-    The first game I set out to make.
+    Project first began on April 15, 2022.<br>
+    Project not completed yet.<br>
+    Learning everything there is to java.
   </b>
 </p>
 
