@@ -2,7 +2,7 @@
 <h1 align="center">Learning Java</h1>
 
 <p align="center">
-  <img src=http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png><br>
+  <img src=https://img.icons8.com/nolan/344/java-coffee-cup-logo.png><br>
   <b>
     Project first began on April 15, 2022.<br>
     Project not completed yet.<br>
