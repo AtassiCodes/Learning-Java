@@ -15,6 +15,10 @@ public class Zoo_population {
 		Birds parrot = new Birds("parrot", 3, 1, 15, "green", "worms");
 		
 		parrot.flying();
+	
+		Birds chicken = new Chicken("chicken", 1, 1, 3, "red", "worms");
+		
+		chicken.flying();
 	}
 	
 }
