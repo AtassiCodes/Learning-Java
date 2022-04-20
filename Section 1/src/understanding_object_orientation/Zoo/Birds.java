@@ -6,8 +6,8 @@ public class Birds extends Animal{ // sub class, this is inheritance
 		super(species, age, size, weight, color, food);
 	}
 	
-	public void flying() {
-		System.out.println("Wow! That is a beutiful " + color + " " + species + " bird flying.");
-	}
-		
+	//public void flying() {
+	//	System.out.println("Wow! That is a beutiful " + color + " " + species + " bird flying.");
+	// we are now adding flying() as an interface
+	//}
 }
