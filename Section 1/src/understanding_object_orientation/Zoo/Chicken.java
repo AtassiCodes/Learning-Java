@@ -12,5 +12,3 @@ public class Chicken extends Birds {
 //		System.out.println("Chickens can't fly :(");
 		// or we can use interface / abstract methods
 	}
-
-}
