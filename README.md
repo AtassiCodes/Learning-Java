@@ -10,7 +10,7 @@
   </b>
 </p>
 
-<!-- Socials -->
+<!-- Socials  --> 
 
 <p align="center">
   <a href=https://github.com/atassicodes>
